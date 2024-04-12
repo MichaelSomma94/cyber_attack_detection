@@ -25,7 +25,7 @@ producer = KafkaProducer(bootstrap_servers=[BROKER_URL],
 devices = ['device1', 'device2', 'device3', 'device4', 'device5']
 
 def generate_data():
-    for _ in range(10):  # generate 10 data points for each device
+    for _ in range(5):  # generate 10 data points for each device
         for device in devices:
             features = [float(f"{random.gauss(0.5, 0.1):.2f}") for _ in range(10)]  # 10 features
             log_data = {
@@ -41,9 +41,14 @@ def generate_data():
 
 def send_to_kafka():
     for data in generate_data():
-        producer.send('network_data_topic', value=data)
+        producer.send('network_data_top', value=data)
         print("Sent data:", data)
         sleep(1)
 
 if __name__ == "__main__":
     send_to_kafka()
+
+
+# export PYTHONPATH=/Users/michiundslavki/Dropbox/JR/SerWas/cyber_attack_detection:$PYTHONPATH
+
+
