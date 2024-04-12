@@ -1,5 +1,5 @@
 import faust
-from config.settings import KAFKA_BROKER_URL, DETECTED_ANOMALIES_TOPIC, NETWORK_DATA_TOPIC
+from settings import KAFKA_BROKER_URL, DETECTED_ANOMALIES_TOPIC, NETWORK_DATA_TOPIC
 
 class Data(faust.Record, serializer='json'):
     device_id: str

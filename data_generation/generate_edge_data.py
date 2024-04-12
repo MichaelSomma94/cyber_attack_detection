@@ -4,7 +4,7 @@ from kafka import KafkaProducer
 import json
 import random
 from time import sleep
-from config import BROKER_URL
+from settings import BROKER_URL
 
 
 # defing a rigid schema for the streamed data
