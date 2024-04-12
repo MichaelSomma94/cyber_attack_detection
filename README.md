@@ -72,3 +72,8 @@ To verify the creation of the topics:
 /path/to/kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
 
+to consume the data generted by the generate_edge_data.py 
+
+```bash
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic network_data_topic --from-beginning
+```
