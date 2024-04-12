@@ -1,1 +1,1 @@
-from .settings import *
+from config.settings import BROKER_URL, KAFKA_BROKER_URL, DETECTED_ANOMALIES_TOPIC, NETWORK_DATA_TOPIC

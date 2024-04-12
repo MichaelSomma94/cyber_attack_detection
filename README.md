@@ -77,3 +77,10 @@ to consume the data generted by the generate_edge_data.py
 ```bash
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic network_data_topic --from-beginning
 ```
+
+starting the FAUST stream processor 
+
+```bash 
+faust -A anomaly_detection worker -l info
+
+```

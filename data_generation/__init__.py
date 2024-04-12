@@ -1,1 +1,1 @@
-from .generate_edge_data import *
+from data_generation.generate_edge_data import *
